@@ -3,11 +3,10 @@ package Day1;
 public class Operators {
     public static void main(String[] args){
 
-        int i=5;
+        int i=5, sum = 0;
         while(i<15){
-        if (i%2==0 & i%7==0)
-    }
-        System.out.println("sum of 1 to 25 is:"+sum);
+        if (i%2==0 & i%7==0){
+        System.out.println("sum of 1 to 25 is:"+ sum);}}
 
         
         
