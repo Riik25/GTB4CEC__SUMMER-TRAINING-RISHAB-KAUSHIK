@@ -71,17 +71,39 @@ public class Recursion{
 
 }
 
-static int fibonacci(int n, int a, int b) {
-    if (n == 0) {
-        return a;
+public class FibonacciHead {
+    public static int fibonacciHead(int n) {
+        if (n <= 1) {
+            return n; // base case
+        } else {
+            return fibonacciHead(n - 1) + fibonacciHead(n - 2); // recursive call
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println("Fibonacci number at position " + n + " is: " + fibonacciHead(n));
+    }
+}
+//head recursion
+static int fibonacciHead(int n) {
+    if (n <= 1) {
+        return n; // base case
     } else {
-        return fibonacci(n - 1, b, a + b);
+        return fibonacciHead(n - 1) + fibonacciHead(n - 2); // recursive call
     }
 }
 
-public static int fibonacci(int n) {
-    return fibonacci(n, 0, 1);
-}
+//tail recursion
+static int fibonacciTail(int n, int a, int b) {
+    if (n == 0) {
+        return a; // base case
+        } else {
+            return fibonacciTail(n - 1, b, a + b); // recursive call
+        }
+    }
+    
+        
 
         
                 
@@ -97,7 +119,7 @@ public static int fibonacci(int n) {
 
             //int sum=sum(n,0);
             //System.out.println(sum);
-            System.out.println(fibonacci(5, n, n));
+            System.out.println(fibonacciTail(5,0,1));
 
     }
 
