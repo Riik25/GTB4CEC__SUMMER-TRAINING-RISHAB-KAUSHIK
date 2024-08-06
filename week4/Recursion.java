@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Recursion{
     static void print(int n){
         if(n==10 ){
@@ -102,14 +104,50 @@ static int fibonacciTail(int n, int a, int b) {
             return fibonacciTail(n - 1, b, a + b); // recursive call
         }
     }
-    
-        
+        //tail recursion
+    static void genSubseq(String ques, String ans){
+        if(ques.length() == 0){
+            System.out.println(ans);
+            return ;
+        }
 
-        
-                
+        genSubseq(ques.substring(1), ans+ques.charAt(0));
+        genSubseq(ques.substring(1), ans + "");
+    }
+        // head recursion
+    static int countSubseq(String s){
+        if(s.length()==0){
+            return 1;
+
+        }else{
+            int count = countSubseq(s.substring(1));
+           // count += countSubseq(s.substring(1))*2;
+            return count*2;
+        }
+
+}
+
+    static void genPar(int n, int l, int r, String ans){
+        if(l == n && l==r){  
+            System.out.println(ans);
+            return ;
+        }
+        if(l>n || r>l){
+            return ;
+        }
+        if(l<n){
+            genPar(n,r,l+1,ans+"{");
+        }
+        if(r<n){
+            genPar(n, r+1,l,ans+"{");
+        }
+    }
+
+    
+
 
  public static void main(String[] args){
-        int a = 1, n=1;
+        int a = 1, n=3;
         //print(n);
 
         /*int sum = 0;
@@ -119,7 +157,7 @@ static int fibonacciTail(int n, int a, int b) {
 
             //int sum=sum(n,0);
             //System.out.println(sum);
-            System.out.println(fibonacciTail(5,0,1));
+           //genPar(n,0,0,"");
 
     }
 
