@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-express-mysql-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Riik25/socialmediaclone.git"
+  },
+  "keywords": [
+    "socialmediaclone"
+  ],
+  "author": "Rishab kaushik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Riik25/socialmediaclone/issues"
+  },
+  "homepage": "https://github.com/Riik25/socialmediaclone#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
